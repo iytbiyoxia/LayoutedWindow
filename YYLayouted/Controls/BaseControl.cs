@@ -10,51 +10,89 @@ namespace YYLayouted
 {
     public abstract class BaseControl : Control, IYYLayout
     {
-        public abstract ControlRenderBase Render { get; }
+        ControlStates ControlState;
 
+
+        public VirtualCollection VirtualControls
+        {
+            get
+            {
+                return this.InnerControl.VirtualControls;
+            }
+        }
+
+        public string Text
+        {
+            get
+            {
+                return InnerControl.Text;
+            }
+            set
+            {
+                InnerControl.Text = value;
+            }
+        }
+
+        protected VirtualControlBase _innerControl;
+
+        protected abstract VirtualControlBase InnerControl { get; }
 
         public Bitmap DisplayImage
         {
-            get { return this.Render.GetDisplayImage(); }
+            get { return this.InnerControl.GetDisplayImage(); }
         }
 
-        protected override void OnMouseEnter(EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
-            base.OnMouseEnter(e);
-            this.Render.OnMouseEnter(e);
-            this.Invalidate();
+            base.OnResize(e);
+            // SetBestSize();
+            InnerControl.Bounds = ClientRectangle;
         }
 
-        protected override void OnMouseLeave(EventArgs e)
+        protected override void OnMouseEnter(EventArgs eventargs)
         {
-            base.OnMouseLeave(e);
-            this.Render.OnMouseLeave(e);
+            base.OnMouseEnter(eventargs);
+            ControlState = ControlStates.Hover;
+            InnerControl.ControlState = ControlStates.Hover;
+            //InnerControl.MouseOperation(Location, MouseOperationType.Hover);
+            base.Invalidate();
         }
 
-        protected override void OnMouseMove(MouseEventArgs e)
+        protected override void OnMouseLeave(EventArgs eventargs)
         {
-            base.OnMouseMove(e);
-            this.Render.OnMouseMove(e);
-             
+            base.OnMouseLeave(eventargs);
+            ControlState = ControlStates.Normal;
+            InnerControl.ControlState = ControlStates.Normal;
+            base.Invalidate();
         }
 
-        protected override void OnMouseClick(MouseEventArgs e)
+        protected override void OnMouseDown(MouseEventArgs mevent)
         {
-            base.OnMouseClick(e);
-            this.Render.OnMouseClick(e);
+            base.OnMouseDown(mevent);
+            ControlState = ControlStates.Pressed;
+            InnerControl.ControlState = ControlStates.Pressed;
+            base.Invalidate();
         }
 
-        protected override void OnSizeChanged(EventArgs e)
+        protected override void OnMouseUp(MouseEventArgs mevent)
         {
-            base.OnSizeChanged(e);
-            this.Render.OnSizeChanged(this.Size);
+            base.OnMouseUp(mevent);
+            if (ClientRectangle.Contains(mevent.Location))
+                ControlState = ControlStates.Hover;
+            else
+                ControlState = ControlStates.Normal;
+
+            InnerControl.ControlState = ControlState;
+            base.Invalidate();
         }
 
-        protected override void OnLocationChanged(EventArgs e)
+        protected override void OnEnabledChanged(EventArgs e)
         {
-            base.OnLocationChanged(e);
-            this.Render.OnLocationChanged(this.Location); 
+            base.OnEnabledChanged(e);
+            InnerControl.Enabled = base.Enabled;
+            base.Invalidate();
         }
+
     }
 
 }

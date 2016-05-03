@@ -10,6 +10,17 @@ namespace YYLayouted
     {
         Normal = 0,
         Hover = 1,
-        Clicked = 2,
+        Pressed = 2,
     }
+
+    public enum MouseOperationType
+    {
+        Move,
+        Down,
+        Up,
+        Hover,
+        Leave,
+        Wheel
+    }
+
 }

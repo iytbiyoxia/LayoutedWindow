@@ -16,3 +16,12 @@ D:\勿删\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.Properties.Reso
 D:\勿删\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.csproj.GenerateResource.Cache
 D:\勿删\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.exe
 D:\勿删\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.pdb
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\bin\Debug\LayoutedWindow.exe.config
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\bin\Debug\LayoutedWindow.exe
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\bin\Debug\LayoutedWindow.pdb
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.csprojResolveAssemblyReference.cache
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.Form1.resources
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.Properties.Resources.resources
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.csproj.GenerateResource.Cache
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.exe
+E:\勿删\GitProject\LayoutedWindow\LayoutedWindow\obj\Debug\LayoutedWindow.pdb

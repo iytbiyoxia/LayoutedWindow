@@ -35,6 +35,8 @@ namespace YYLayouted
             _paintTimer.Start();
 
             ReDraw(this.Bounds);
+
+            this.buttonControl1.VirtualControls.Add(new VirtualButton(this.buttonControl1) { ControlSize = new Size(20, 10), Text = "AA" });
         }
 
         protected override void OnControlAdded(ControlEventArgs e)
@@ -96,6 +98,8 @@ namespace YYLayouted
 
         void RefreshBmp(Rectangle rect)
         {
+            this.FindForm().Text = string.Format("{0},{1}", rect.Width, rect.Height);
+
             _mainGraphics.Clear(Color.Transparent);
             foreach (Control item in this.Controls)
             {
@@ -107,7 +111,7 @@ namespace YYLayouted
                     {
                         var yyI = item as IYYLayout;
                         _mainGraphics.DrawImage(yyI.DisplayImage, item.Location);
-                        _mainGraphics.DrawString("TTT", new Font("宋体", 20), Brushes.Red, item.Location);
+                        //_mainGraphics.DrawString("TTT", new Font("宋体", 20), Brushes.Red, item.Location);
                     }
                     else if (item is FlowLayoutPanel)
                     {

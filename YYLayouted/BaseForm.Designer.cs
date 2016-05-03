@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonControl1 = new YYLayouted.ButtonControl();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonControl1 = new YYLayouted.ButtonControl();
             this.SuspendLayout();
-            // 
-            // buttonControl1
-            // 
-            this.buttonControl1.Location = new System.Drawing.Point(535, 178);
-            this.buttonControl1.Name = "buttonControl1";
-            this.buttonControl1.Size = new System.Drawing.Size(75, 23);
-            this.buttonControl1.TabIndex = 0;
-            this.buttonControl1.Text = "buttonControl1";
             // 
             // button1
             // 
@@ -48,6 +40,13 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonControl1
+            // 
+            this.buttonControl1.Location = new System.Drawing.Point(535, 178);
+            this.buttonControl1.Name = "buttonControl1";
+            this.buttonControl1.Size = new System.Drawing.Size(228, 109);
+            this.buttonControl1.TabIndex = 0;
             // 
             // BaseForm
             // 

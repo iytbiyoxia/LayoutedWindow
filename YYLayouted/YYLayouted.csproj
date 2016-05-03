@@ -56,9 +56,9 @@
     <Compile Include="Controls\ButtonControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\ButtonRender.cs" />
-    <Compile Include="Core\Class1.cs" />
-    <Compile Include="Core\ControlRenderBase.cs" />
+    <Compile Include="Core\VirtualButton.cs" />
+    <Compile Include="Core\VirtualCollection.cs" />
+    <Compile Include="Core\VirtualControlBase.cs" />
     <Compile Include="Core\Enums.cs" />
     <Compile Include="Core\IYYLayout.cs" />
     <Compile Include="Core\NativeMethods.cs" />

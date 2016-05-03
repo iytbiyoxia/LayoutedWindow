@@ -16,3 +16,12 @@ D:\勿删\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.Properties.Resources.re
 D:\勿删\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.csproj.GenerateResource.Cache
 D:\勿删\LayoutedWindow\YYLayouted\bin\Debug\YYLayouted.exe
 D:\勿删\LayoutedWindow\YYLayouted\bin\Debug\YYLayouted.pdb
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\bin\Debug\YYLayouted.exe.config
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.exe
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.pdb
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\bin\Debug\YYLayouted.exe
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\bin\Debug\YYLayouted.pdb
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.csprojResolveAssemblyReference.cache
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.BaseForm.resources
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.Properties.Resources.resources
+E:\勿删\GitProject\LayoutedWindow\YYLayouted\obj\Debug\YYLayouted.csproj.GenerateResource.Cache

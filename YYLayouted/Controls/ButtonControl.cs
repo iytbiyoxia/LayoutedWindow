@@ -8,38 +8,52 @@ namespace YYLayouted
 {
     public class ButtonControl : BaseControl
     {
-        public ControlStates ControlState { get; set; }
+         
+        //public ControlStates ControlState { get; set; }
 
 
-        ControlRenderBase _render;
-        public override ControlRenderBase Render
+        //VirtualControlBase _render;
+        //public override VirtualControlBase VirtualControl
+        //{
+        //    get
+        //    {
+        //        if (_render == null)
+        //            _render = new VirtualButton();
+        //        return _render;
+        //    }
+        //}
+
+        //protected override void OnMouseEnter(EventArgs e)
+        //{
+        //    base.OnMouseEnter(e);
+        //    ControlState = ControlStates.Hover;
+        //}
+
+        //protected override void OnMouseLeave(EventArgs e)
+        //{
+        //    base.OnMouseLeave(e);
+        //    ControlState = ControlStates.Normal;
+        //}
+
+        //protected override void OnMouseClick(System.Windows.Forms.MouseEventArgs e)
+        //{
+        //    base.OnMouseClick(e);
+        //    if (e.Button == System.Windows.Forms.MouseButtons.Left)
+        //    {
+        //        ControlState = ControlStates.Clicked;
+        //    }
+        //}
+
+        protected override VirtualControlBase InnerControl
         {
             get
             {
-                if (_render == null)
-                    _render = new ButtonRender();
-                return _render;
-            }
-        }
-
-        protected override void OnMouseEnter(EventArgs e)
-        {
-            base.OnMouseEnter(e);
-            ControlState = ControlStates.Hover;
-        }
-
-        protected override void OnMouseLeave(EventArgs e)
-        {
-            base.OnMouseLeave(e);
-            ControlState = ControlStates.Normal;
-        }
-
-        protected override void OnMouseClick(System.Windows.Forms.MouseEventArgs e)
-        {
-            base.OnMouseClick(e);
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                ControlState = ControlStates.Clicked;
+                if (_innerControl == null)
+                {
+                    _innerControl = new VirtualButton(this);
+                    _innerControl.Bounds = ClientRectangle;
+                }
+                return _innerControl;
             }
         }
     }
